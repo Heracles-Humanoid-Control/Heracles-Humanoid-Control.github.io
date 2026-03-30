@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="description" content="Heracles: Bridging Precise Tracking and Generative Synthesis for General Humanoid Control">
+  <meta name="keywords" content="Humanoid Control; Diffusion Middleware; Motion Tracking; Generative Synthesis; Fall Recovery">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Heracles</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap">
+
+  <style>
+    body {
+      background: #f2f2f2;
+      color: #1f2937;
+      font-family: "Source Sans 3", "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 1100px;
+    }
+
+    .title {
+      color: #1f2937;
+    }
+
+    .content,
+    .publication-authors,
+    .publication-links {
+      color: #4b5563;
+    }
+
+    .brand-accent {
+      color: #3b82f6;
+    }
+
+    .project-title-inline {
+      font-size: 3.6rem;
+      font-weight: 700;
+      color: #2f2f2f;
+      line-height: 1.35;
+    }
+
+    .publication-authors {
+      font-size: 1.05rem;
+    }
+
+    .publication-authors .author-block a {
+      font-size: 1.05rem;
+    }
+
+    .publication-links .button {
+      font-size: 1rem;
+      padding-left: 1.2rem;
+      padding-right: 1.2rem;
+    }
+
+    .publication-links .button .icon {
+      font-size: 1.1rem;
+    }
+
+    .band {
+      padding-top: 3.5rem;
+      padding-bottom: 3.5rem;
+    }
+
+    .band-a {
+      background: #f6f6f3;
+    }
+
+    .band-white {
+      background: #ffffff;
+    }
+
+    .author-abstract {
+      margin-top: 1.25rem;
+    }
+
+    .video-frame,
+    .video-container {
+      border: 0 !important;
+      border-radius: 12px !important;
+      background: transparent !important;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.18) !important;
+      overflow: hidden;
+      padding: 0 !important;
+      height: auto !important;
+      aspect-ratio: 16 / 9;
+    }
+
+    video {
+      border: 0 !important;
+      border-radius: 12px !important;
+      box-shadow: none !important;
+      display: block;
+      width: 100% !important;
+      height: auto !important;
+      object-fit: contain !important;
+    }
+
+    #hero-video {
+      object-fit: cover !important;
+      height: 100% !important;
+    }
+
+    .main-video-wrapper {
+      max-width: 900px;
+      margin: 2rem auto 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.16);
+    }
+
+    .main-video-wrapper video {
+      border-radius: 0 !important;
+      width: 100% !important;
+      height: auto !important;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HERO: Cover Video -->
+  <section class="hero is-link is-fullheight video" style="overflow: hidden; position: relative;">
+    <div class="hero-video" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 101%; height: 101%;">
+      <video id="hero-video" playsinline autoplay muted loop style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+        <source src="materials/Videos/cover.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div style="position: absolute; inset: 0; background: rgba(0, 0, 0, 0.45); z-index: 1;"></div>
+
+    <div class="hero-body" style="position: relative; z-index: 2;">
+      <div class="container has-text-centered">
+        <h1 class="title is-1 publication-title is-size-1-mobile" style="font-size: 6.6rem; color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,0.7), 0 0 40px rgba(0,0,0,0.4);">
+          <span class="brand-accent">Heracles</span>
+        </h1>
+        <h1 class="subtitle is-1 publication-title is-size-4-mobile" style="font-size: 3.2rem; color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,0.7), 0 0 40px rgba(0,0,0,0.4);">
+          Bridging Precise Tracking and Generative Synthesis for General Humanoid Control
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFO: Authors / Links / Abstract -->
+  <section class="hero band band-white">
+    <div class="hero-body">
+      <div class="container is-fullhd">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <div class="project-title-inline" style="margin-bottom: 1.2rem;">
+              <span class="brand-accent">Heracles</span>: Bridging Precise Tracking and Generative Synthesis for General Humanoid Control
+            </div>
+            <div class="is-size-5 publication-authors" style="font-weight: 600;">
+              X-Humanoid Team
+            </div>
+
+            <div style="margin-top: 0.75rem;">
+              <img src="materials/figures/x_humanoid_logo.png" alt="X-Humanoid"
+                   style="height: 1.4rem; width: auto; vertical-align: middle;">
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span>Code (Coming Soon)</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+
+            <!-- Main Video -->
+            <div class="main-video-wrapper">
+              <video controls autoplay muted loop playsinline>
+                <source src="materials/Videos/cover.mp4" type="video/mp4">
+              </video>
+            </div>
+            <p class="content" style="font-size: 1rem; color: #4b5563; max-width: 860px; margin: 0.9rem auto 0; line-height: 1.7; text-align: center;">
+              <b><i>Heracles</i></b>. A state-conditioned diffusion middleware that bridges precise motion tracking and generative synthesis for general-purpose humanoid control.
+            </p>
+
+            <div class="columns is-centered has-text-centered author-abstract">
+              <div class="column is-two-thirds">
+                <h2 class="title is-3">Abstract</h2>
+                <div class="content has-text-justified">
+                  <p>
+                    Achieving general-purpose humanoid control requires a delicate balance between the precise execution of commanded motions and the flexible, anthropomorphic adaptability needed to recover from unpredictable environmental perturbations. Current general controllers predominantly formulate motion control as a rigid reference-tracking problem. While effective in nominal conditions, these trackers often exhibit brittle, non-anthropomorphic failure modes under severe disturbances, lacking the generative adaptability inherent to human motor control. To overcome this limitation, we propose <b><i>Heracles</i></b>, a novel state-conditioned diffusion middleware that bridges precise motion tracking and generative synthesis. Rather than relying on rigid tracking paradigms or complex explicit mode-switching, <b><i>Heracles</i></b> operates as an intermediary layer between high-level reference motions and low-level physics trackers. By conditioning on the robot&rsquo;s real-time state, the diffusion model implicitly adapts its behavior: it approximates an identity map when the state closely aligns with the reference, preserving zero-shot tracking fidelity. Conversely, when encountering significant state deviations, it seamlessly transitions into a generative synthesizer to produce natural, anthropomorphic recovery trajectories. Our framework demonstrates that integrating generative priors into the control loop not only significantly enhances robustness against extreme perturbations but also elevates humanoid control from a rigid tracking paradigm to an open-ended, generative general-purpose architecture.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- System Overview -->
+  <section class="section band band-a">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-two-thirds">
+          <h2 class="title is-3" style="text-align: center;">System Overview</h2>
+          <div class="has-text-centered" style="margin-top: 1.5rem;">
+            <img src="materials/figures/pipeline.png" alt="Overview of the Heracles framework"
+                 style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 12px 28px rgba(15, 23, 42, 0.16);">
+          </div>
+          <div class="content has-text-justified" style="margin-top: 1rem;">
+            <p>
+              <strong>Overview of the Heracles framework.</strong> <strong>(a)</strong> A flow matching model learns to synthesize feasible keyframe trajectories conditioned on the current state. <strong>(b)</strong> Reference motions are quantized into discrete tokens via FSQ, shared by reconstruction and action prediction heads. <strong>(c)</strong> At inference, the middleware generates trajectories through closed-loop replanning for the motion tracker to execute. The proposed framework intrinsically decouples high-level intent generation from high-frequency physical execution, comprising two primary components: a <em>state-conditioned generative middleware</em> and a <em>low-level, general-purpose physics tracking policy</em>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BibTeX -->
+  <section class="section band band-white" id="BibTeX">
+    <div class="container content">
+      <h2 class="title is-3">BibTeX</h2>
+      <pre><code>@misc{heracles2026,
+  title         = {Heracles: Bridging Precise Tracking and Generative Synthesis for General Humanoid Control},
+  author        = {Qiang Zhang and Zelin Tao and Zeran Su and Peiran Liu and Jingkai Sun and Wenqiang Que and Jiahao Ma and Jialin Yu and Gang Han and Wen Zhao and Zhiyuan Xu and Yijie Guo and Jian Tang},
+  year          = {2026},
+  eprint        = {TODO},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {TODO}
+}</code></pre>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>Page template borrowed from <a href="https://nerfies.github.io/">Nerfies</a> and <a href="https://robotpan.github.io/">RobotPan</a>.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
